@@ -1,0 +1,10 @@
+1. next 버튼을 클릭하면 숫자가 1씩 증가한다 
+let  currentNum  = 1;
+currentNum ++ 
+
+2. currentNum이 동그라미 숫자보다 크면  currentNum은 동그라미 숫자와 같게한다 
+
+3. 동그라미 숫자에 active 클래스가 붙는다 
+
+
+4. 프로그래스바 넓이가 늘어난다 
