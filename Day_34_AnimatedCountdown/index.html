@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Countdown</title>
+  <title>Image Carousel</title>
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -14,22 +14,18 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <div class="counter">
-    <div class="nums">
-      <span class="in">3</span>
-      <span>2</span>
-      <span>1</span>
-      <span>0</span>
+  <div class="carousel">
+    <div class="image-container" id="imgs">
+      <img src="https://images.unsplash.com/photo-1725055425170-474e60968d3e?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      <img src="https://images.unsplash.com/photo-1725113160838-9efa2a25aa0b?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      <img src="https://images.unsplash.com/photo-1724596314963-c71d1e58204d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0N3x8fGVufDB8fHx8fA%3D%3D" alt="">
+      <img src="https://images.unsplash.com/photo-1724963475892-a3274091955e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5NHx8fGVufDB8fHx8fA%3D%3D" alt="">
     </div>
-    <h4>Get Ready</h4>
+    <div class="buttons-container">
+      <button id="left" class="btn">Prev</button>
+      <button id="right" class="btn">Next</button>
+    </div>
   </div>
-  <div class="final">
-    <h1>Go</h1>
-    <button id="replay">
-      <span>Replay</span>
-    </button>
-  </div>
-
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script> -->
   <script src="assets/js/script.js"></script>
 </body>
