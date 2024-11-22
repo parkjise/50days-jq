@@ -1,14 +1,25 @@
-const panels = document.querySelectorAll('.panel');
+const panels = document.querySelectorAll(".panel");
 
-panels.forEach((items) => {
-  items.addEventListener('click', () => {
+panels.forEach((panel) => {
+  panel.addEventListener("click", function () {
     removeActiveClasses();
-    items.classList.add('active')
-  })
-})
+    panel.classList.add("active");
+  });
+});
 
-function removeActiveClasses(){
-  panels.forEach(items => {
-    items.classList.remove('active')
-  })
+function removeActiveClasses() {
+  panels.forEach((item) => {
+    item.classList.remove("active");
+  });
 }
+
+// const panels = document.querySelectorAll(".panel");
+
+// panels.forEach((panel) => {
+//   panel.addEventListener("click", function () {
+//     panels.forEach((item) => {
+//       item.classList.remove("active");
+//     });
+//     panel.classList.add("active");
+//   });
+// });
