@@ -1,40 +1,40 @@
 const body = document.body
+const rightBtn = document.querySelector('#right')
+const leftBtn = document.querySelector('#left')
 const slides = document.querySelectorAll('.slide')
-const leftBtn = document.getElementById('left')
-const righttBtn = document.getElementById('right')
 
-let activesSlide = 0
+let idx = 0;
 
-righttBtn.addEventListener('click',() => {
-  activesSlide++
-
-  if(activesSlide > slides.length - 1) {
-    activesSlide = 0
+rightBtn.addEventListener('click',function(){
+  idx++
+  if(idx > slides.length-1){
+      idx = 0;
   }
-
-  setBgToBody()
-  setActiveSlide()
-})
-leftBtn.addEventListener('click',() => {
-  activesSlide--
-
-  if(activesSlide < 0) {
-    activesSlide = slides.length -1
-  }
-
   setBgToBody()
   setActiveSlide()
 })
 
+leftBtn.addEventListener('click',function(){
+  idx--
+  if(idx <  0){
+    idx =  slides.length-1
+  }
+  setBgToBody()
+  setActiveSlide()
+})
 
 setBgToBody()
 
+// 배경 이미지 설정함수
 function setBgToBody(){
-  body.style.backgroundImage = slides[activesSlide].style.backgroundImage
+  body.style.backgroundImage = slides[idx].style.backgroundImage
 }
 
-function setActiveSlide(){
-  slides.forEach((slide) => slide.classList.remove('active'))
+// 활성 슬라이드 설정 함수
 
-  slides[activesSlide].classList.add('active')
+function setActiveSlide(){
+  slides.forEach(function(item){
+    item.classList.remove('active')
+  })
+  slides[idx].classList.add('active')
 }
